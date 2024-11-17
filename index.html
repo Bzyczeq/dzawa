@@ -30,81 +30,81 @@ function okno_zamknij()
  </script>
   <style>
 /* CSS */
-.button-57 {
-  position: relative;
-  overflow: hidden;
-  border: 1px solid #18181a;
-  color: #18181a;
-  display: inline-block;
-  font-size: 15px;
-  line-height: 15px;
-  padding: 18px 18px 17px;
-  text-decoration: none;
+.button-19 {
+  appearance: button;
+  background-color: #1899D6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
   cursor: pointer;
-  background: #fff;
+  display: inline-block;
+  font-family: din-round,sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
   user-select: none;
   -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
-.button-57 span:first-child {
-  position: relative;
-  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
-  z-index: 10;
-}
-
-.button-57 span:last-child {
-  color: white;
-  display: block;
-  position: absolute;
-  bottom: 0;
-  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
-  z-index: 100;
-  opacity: 0;
-  top: 50%;
-  left: 50%;
-  transform: translateY(225%) translateX(-50%);
-  height: 14px;
-  line-height: 13px;
-}
-
-.button-57:after {
-  content: "";
-  position: absolute;
-  bottom: -50%;
-  left: 0;
+  vertical-align: middle;
+  white-space: nowrap;
   width: 100%;
-  height: 100%;
-  background-color: black;
-  transform-origin: bottom center;
-  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
-  transform: skewY(9.3deg) scaleY(0);
-  z-index: 50;
 }
 
-.button-57:hover:after {
-  transform-origin: bottom center;
-  transform: skewY(9.3deg) scaleY(2);
+.button-19:after {
+  background-clip: padding-box;
+  background-color: #1CB0F6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
 }
 
-.button-57:hover span:last-child {
-  transform: translateX(-50%) translateY(-100%);
-  opacity: 1;
-  transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+.button-19,
+.button-19:focus {
+  user-select: auto;
+}
+
+.button-19:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+.button-19:disabled {
+  cursor: auto;
+}
+
+.button-19:active {
+  border-width: 4px 0 0;
+  background: none;
 }
   </style>
  </head>
 <body>
 
  <form>
- <button class="button-57" role="button"><span class="text">Button 57</span><span>Alternate text</span></button>
- 
-   <input type="button" class="button-57" role="button" name="zadanie1" <span class="text">Zadanie 1</span><span>Maja</span> onclick="WinOpen_z1(' ')">
-  <input type="button" class="button-57" role="button" name="zadanie1" value="zadanie1 - Kosiorek" onclick="WinOpen_z1(' ')">
-  <input type="button" class="button-57" role="button" name="zadanie2" value="zadanie2 - Kosiorek" onclick="WinOpen_z2(' ')">
-  <input type="button" class="button-57" role="button" name="zadanie3" value="zadanie3 - Kosiorek" onclick="WinOpen_z3(' ')">
-  <input type="button" class="button-57" role="button" name="zadanie4" value="zadanie4 - Kosiorek" onclick="WinOpen_z4(' ')">
-  <input type="button" class="button-57" role="button" name="zadanie5" value="zadanie5 - Kosiorek" onclick="WinOpen_z5(' ')">
+
+  <input type="button" class="button-19" role="button" name="zadanie1" value="zadanie1 - Kosiorek" onclick="WinOpen_z1(' ')">
+  <input type="button" class="button-19" role="button" name="zadanie2" value="zadanie2 - Kosiorek" onclick="WinOpen_z2(' ')">
+  <input type="button" class="button-19" role="button" name="zadanie3" value="zadanie3 - Kosiorek" onclick="WinOpen_z3(' ')">
+  <input type="button" class="button-19" role="button" name="zadanie4" value="zadanie4 - Kosiorek" onclick="WinOpen_z4(' ')">
+  <input type="button" class="button-19" role="button" name="zadanie5" value="zadanie5 - Kosiorek" onclick="WinOpen_z5(' ')">
   <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
  </form>
 </body>
