@@ -1,53 +1,51 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
-    <meta charset="utf-8">
-    <title>JavaScript - Pytania i Odpowiedzi</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-        }
-        .question {
-            font-weight: bold;
-            margin-top: 10px;
-        }
-        .answer {
-            margin-left: 20px;
-        }
-        ul {
-            margin: 5px 0;
-            padding-left: 20px;
-        }
-    </style>
-</head>
-<body>
+    <meta charset="UTF-8">
+    <title>Zadanie 20</title>
     <script>
-        document.write('<div class="question">1. Wymień cztery sposoby wyprowadzania danych w JS</div>');
-        document.write('<div class="answer"><b>document.write(), alert(), do okienek formularza, do tabeli</b></div>');
-        
-        document.write('<div class="question">2. Czym jest funkcja w JS? Omów przy użyciu 4 podpunktów.</div>');
-        document.write('<div class="answer"><ul>' +
-            '<li>Jest to zbiór zgrupowanych instrukcji, które możemy uruchamiać poprzez podanie ich nazwy.</li>' +
-            '<li>Każda funkcja po wywołaniu wykonuje swój wewnętrzny kod.</li>' +
-            '<li>Funkcja może mieć argumenty, które są przetwarzane wewnątrz, np. <code>suma_kry(a, b)</code>.</li>' +
-            '<li>Może (nie zawsze) zwrócić obliczoną wartość za pomocą <code>return</code>.</li>' +
-            '</ul></div>');
-        
-        document.write('<div class="question">3. Omów metody <code>getElementsByName</code>, <code>getElementById</code>, <code>getElementsByTagName</code>.</div>');
-        document.write('<div class="answer"><ul>' +
-            '<li><b>getElementById(id)</b> – dostęp do elementu o konkretnej wartości atrybutu <code>id</code>.</li>' +
-            '<li><b>getElementsByTagName(znacznik)</b> – dostęp do wszystkich elementów danego typu, np. <code>P</code> lub <code>DIV</code>.</li>' +
-            '<li><b>getElementsByName(nazwa)</b> – dostęp do wszystkich elementów o konkretnej wartości atrybutu <code>name</code>.</li>' +
-            '</ul></div>');
-        
-        document.write('<div class="question">4. Omów właściwości <code>innerHTML</code>, <code>innerText</code>, <code>className</code>.</div>');
-        document.write('<div class="answer"><ul>' +
-            '<li><b>innerHTML</b> – umożliwia odczyt, modyfikację, wstawienie lub usunięcie kodu HTML w danym elemencie.</li>' +
-            '<li><b>innerText</b> – określa ciąg znaków, który zostanie umieszczony w elemencie.</li>' +
-            '<li><b>className</b> – umożliwia przypisanie klasy CSS do elementu.</li>' +
-            '</ul></div>');
+        function AB_kos() {
+            var xa = parseFloat(document.getElementById('xa_kos').value);
+            var xb = parseFloat(document.getElementById('xb_kos').value);
+            var ya = parseFloat(document.getElementById('ya_kos').value);
+            var yb = parseFloat(document.getElementById('yb_kos').value);
+            var dlugoscAB = Math.sqrt(Math.pow(xa - xb, 2) + Math.pow(ya - yb, 2));
+            document.getElementById('dlugoscAB').innerText = "Długość AB: " + dlugoscAB.toFixed(2) + " cm";
+        }
+
+        function BC_kos() {
+            var xb = parseFloat(document.getElementById('xb_kos').value);
+            var xc = parseFloat(document.getElementById('xc_kos').value);
+            var yb = parseFloat(document.getElementById('yb_kos').value);
+            var yc = parseFloat(document.getElementById('yc_kos').value);
+            var dlugoscBC = Math.sqrt(Math.pow(xb - xc, 2) + Math.pow(yb - yc, 2));
+            document.getElementById('dlugoscBC').innerText = "Długość BC: " + dlugoscBC.toFixed(2) + " cm";
+        }
+
+        function AC_kos() {
+            var xa = parseFloat(document.getElementById('xa_kos').value);
+            var xc = parseFloat(document.getElementById('xc_kos').value);
+            var ya = parseFloat(document.getElementById('ya_kos').value);
+            var yc = parseFloat(document.getElementById('yc_kos').value);
+            var dlugoscAC = Math.sqrt(Math.pow(xa - xc, 2) + Math.pow(ya - yc, 2));
+            document.getElementById('dlugoscAC').innerText = "Długość AC: " + dlugoscAC.toFixed(2) + " cm";
+        }
     </script>
+</head>
+
+<body>
+    <h1>Oblicz długości boków trójkąta</h1>
+    <input type="number" id="xa_kos" placeholder="xa"> xa cm<br>
+    <input type="number" id="ya_kos" placeholder="ya"> ya cm<br>
+    <input type="number" id="xb_kos" placeholder="xb"> xb cm<br>
+    <input type="number" id="yb_kos" placeholder="yb"> yb cm<br>
+    <input type="number" id="xc_kos" placeholder="xc"> xc cm<br>
+    <input type="number" id="yc_kos" placeholder="yc"> yc cm<br>
+    <input type="button" value="Oblicz długości boków" onclick="AB_kos(); BC_kos(); AC_kos();"><br><br>
+    <div id="dlugoscAB"></div>
+    <div id="dlugoscBC"></div>
+    <div id="dlugoscAC"></div>
 </body>
+
 </html>
